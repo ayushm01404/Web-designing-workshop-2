@@ -1,0 +1,102 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Student Result Calculator</title> 
+<style>
+    body{
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container{
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 25px rgba(0,0,0,0.3);
+  text-align: center;
+  width: 400px;
+  color: white;
+}
+
+h2{
+  margin-bottom: 20px;
+}
+
+input{
+  padding: 10px;
+  width: 70%;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  margin-top: 10px;
+}
+
+button{
+  padding: 10px 20px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #ff512f, #dd2476);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button:hover{
+  transform: scale(1.1);
+  background: linear-gradient(45deg, #36d1dc, #5b86e5);
+}
+
+#result{
+  margin-top: 20px;
+  font-size: 16px;
+  background: rgba(255,255,255,0.2);
+  padding: 15px;
+  border-radius: 10px;
+}
+</style>
+</head>
+
+ <body> 
+<div class="container"> 
+<h2>Student Result Calculator</h2> 
+<label>Enter Number of Subjects:</label><br> 
+<input type="number" id="subjects"><br><br> 
+<button onclick="calculateResult()">Calculate Result</button> 
+<div id="result"></div> 
+</div> 
+<script> 
+function calculateResult(){ 
+let n = document.getElementById("subjects").value; 
+let total = 0; 
+for(let i=1;i<=n;i++){ 
+let marks = parseFloat(prompt("Enter marks for Subject " + i));
+total = total + marks;
+}
+let average = total / n; 
+let grade; 
+if(average >= 90){ 
+grade = "A+"; 
+} else if (average >= 75){ 
+grade = "A"; 
+} else if (average >= 60){ 
+grade = "B"; 
+} else if (average >= 50){ 
+grade = "C"; 
+} else { 
+grade = "Fail"; 
+} let result = 
+"Total Marks: " + total + "<br>" + 
+"Average: " + average.toFixed(2) + "<br>" + 
+"Grade: " + grade; 
+document.getElementById("result").innerHTML = result;
+</script>
+</body>
+</html>
