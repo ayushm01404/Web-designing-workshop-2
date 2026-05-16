@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Timetable Grid</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .timetable-header {
+            background-color:brown;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 15px 10px;
+            border-radius: 8px 8px 0 0;
+        }
+        .time-slot {
+            background-color: #f1f3f5;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 90px;
+            border: 1px solid #dee2e6;
+        }
+        .subject {
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            margin: 4px 0;
+            font-weight: 500;
+        }
+        .break {
+            background-color: #e9ecef !important;
+            color: #6c757d;
+            font-weight: bold;
+        }
+        .math     { background-color: #e3f2fd; }
+        .science  { background-color: #e8f5e9; }
+        .english  { background-color: #fff3e0; }
+        .history  { background-color: #fce4ec; }
+        .computer { background-color: #f3e5f5; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4 text-primary"> Weekly Timetable</h1>
+        
+        <div class="card shadow-sm">
+            <div class="card-body p-0">
+                
+            
+                <div class="row g-0 timetable-header">
+                    <div class="col-2">Time</div>
+                    <div class="col">Monday</div>
+                    <div class="col">Tuesday</div>
+                    <div class="col">Wednesday</div>
+                    <div class="col">Thursday</div>
+                    <div class="col">Friday</div>
+                </div>
+
+                
+                <div class="row g-0 border-bottom">
+                    <div class="col-2 time-slot">09:00 - 10:00</div>
+                    <div class="col"><div class="subject math">Mathematics</div></div>
+                    <div class="col"><div class="subject science">Physics</div></div>
+                    <div class="col"><div class="subject english">English</div></div>
+                    <div class="col"><div class="subject math">Mathematics</div></div>
+                    <div class="col"><div class="subject history">History</div></div>
+                </div>
+
+            
+                <div class="row g-0 border-bottom">
+                    <div class="col-2 time-slot">10:00 - 11:00</div>
+                    <div class="col"><div class="subject science">Chemistry</div></div>
+                    <div class="col"><div class="subject math">Mathematics</div></div>
+                    <div class="col"><div class="subject science">Biology</div></div>
+                    <div class="col"><div class="subject english">English</div></div>
+                    <div class="col"><div class="subject computer">Computer Science</div></div>
+                </div>
+
+                
+                <div class="row g-0 border-bottom">
+                    <div class="col-2 time-slot break">11:00 - 11:15</div>
+                    <div class="col-10 break d-flex align-items-center justify-content-center">
+                        <strong>Short Break</strong>
+                    </div>
+                </div>
+
+        
+                <div class="row g-0 border-bottom">
+                    <div class="col-2 time-slot">11:15 - 12:15</div>
+                    <div class="col"><div class="subject english">English</div></div>
+                    <div class="col"><div class="subject history">History</div></div>
+                    <div class="col"><div class="subject math">Mathematics</div></div>
+                    <div class="col"><div class="subject science">Physics</div></div>
+                    <div class="col"><div class="subject math">Mathematics</div></div>
+                </div>
+
+                
+                <div class="row g-0 border-bottom">
+                    <div class="col-2 time-slot">12:15 - 13:15</div>
+                    <div class="col"><div class="subject history">History</div></div>
+                    <div class="col"><div class="subject computer">Computer Science</div></div>
+                    <div class="col"><div class="subject history">History</div></div>
+                    <div class="col"><div class="subject computer">Computer Science</div></div>
+                    <div class="col"><div class="subject science">Chemistry</div></div>
+                </div>
+
+        
+                <div class="row g-0 border-bottom">
+                    <div class="col-2 time-slot break">13:15 - 14:00</div>
+                    <div class="col-10 break d-flex align-items-center justify-content-center">
+                        <strong>Lunch Break</strong>
+                    </div>
+                </div>
+
+                
+                <div class="row g-0">
+                    <div class="col-2 time-slot">14:00 - 15:00</div>
+                    <div class="col"><div class="subject computer">Computer Science</div></div>
+                    <div class="col"><div class="subject english">English</div></div>
+                    <div class="col"><div class="subject science">Chemistry</div></div>
+                    <div class="col"><div class="subject history">History</div></div>
+                    <div class="col"><div class="subject english">English</div></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="mt-4 text-center">
+            <button class="btn btn-primary" onclick="window.print()">Print Timetable</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
